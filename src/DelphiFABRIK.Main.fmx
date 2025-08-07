@@ -1,0 +1,158 @@
+object Main: TMain
+  Left = 0
+  Top = 0
+  Caption = 'Delphi FABRIK'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object Viewport3D1: TViewport3D
+    Align = Client
+    Size.Width = 640.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    OnMouseDown = Viewport3D1MouseDown
+    OnMouseMove = Viewport3D1MouseMove
+    object RotationY: TDummy
+      RotationAngle.X = -20.000000000000000000
+      Width = 1.000000000000000000
+      Height = 1.000000000000000000
+      Depth = 1.000000000000000000
+      Quanternion = '(0.173648297786713,0,0,-0.984807729721069)'
+      object RotationX: TDummy
+        Width = 1.000000000000000000
+        Height = 1.000000000000000000
+        Depth = 1.000000000000000000
+        object RootNode: TDummy
+          Width = 1.000000000000000000
+          Height = 1.000000000000000000
+          Depth = 1.000000000000000000
+          OnRender = RootNodeRender
+          object BodyRoot: TDummy
+            Width = 1.000000000000000000
+            Height = 1.000000000000000000
+            Depth = 1.000000000000000000
+          end
+        end
+        object Dummy1: TDummy
+          Position.X = 10.000000000000000000
+          Position.Z = 10.000000000000000000
+          Width = 1.000000000000000000
+          Height = 1.000000000000000000
+          Depth = 1.000000000000000000
+          object Bone1: TDummy
+            Width = 1.000000000000000000
+            Height = 1.000000000000000000
+            Depth = 1.000000000000000000
+            OnRender = Bone1Render
+            object Mesh1: TCube
+              Position.Y = 2.000000000000000000
+              Width = 1.000000000000000000
+              Height = 4.000000000000000000
+              Depth = 1.000000000000000000
+              MaterialSource = LightMaterialSource1
+              object Tail1: TDummy
+                Position.Y = 2.000000000000000000
+                Width = 1.000000000000000000
+                Height = 1.000000000000000000
+                Depth = 1.000000000000000000
+                object Bone2: TDummy
+                  Width = 1.000000000000000000
+                  Height = 1.000000000000000000
+                  Depth = 1.000000000000000000
+                  OnRender = Bone2Render
+                  object Mesh2: TCube
+                    Position.Y = 1.000000000000000000
+                    Width = 1.000000000000000000
+                    Height = 2.000000000000000000
+                    Depth = 1.000000000000000000
+                    MaterialSource = LightMaterialSource2
+                    object Tail2: TDummy
+                      Position.Y = 1.000000000000000000
+                      Width = 1.000000000000000000
+                      Height = 1.000000000000000000
+                      Depth = 1.000000000000000000
+                      object Bone3: TDummy
+                        Width = 1.000000000000000000
+                        Height = 1.000000000000000000
+                        Depth = 1.000000000000000000
+                        OnRender = Bone3Render
+                        object Mesh3: TCube
+                          Position.Y = 1.000000000000000000
+                          Width = 1.000000000000000000
+                          Height = 2.000000000000000000
+                          Depth = 1.000000000000000000
+                          MaterialSource = LightMaterialSource2
+                          object Tail3: TDummy
+                            Position.Y = 1.000000000000000000
+                            Width = 1.000000000000000000
+                            Height = 1.000000000000000000
+                            Depth = 1.000000000000000000
+                          end
+                        end
+                      end
+                    end
+                  end
+                end
+              end
+              object FloatAnimation1: TFloatAnimation
+                Enabled = True
+                Duration = 2.000000000000000000
+                Loop = True
+                OnProcess = FloatAnimation1Process
+                PropertyName = 'RotationAngle.Y'
+                StartValue = 0.000000000000000000
+                StopValue = 360.000000000000000000
+              end
+            end
+          end
+        end
+      end
+    end
+    object Light1: TLight
+      Color = claWhite
+      LightType = Directional
+      SpotCutOff = 180.000000000000000000
+      Position.X = -6.803310394287109000
+      Position.Y = -4.555747985839844000
+      RotationAngle.X = -7.001384735107422000
+      RotationAngle.Y = -339.170654296875000000
+      Width = 1.000000000000000000
+      Height = 1.000000000000000000
+      Depth = 1.000000000000000000
+      Quanternion = 
+        '(-0.428876489400864,0.180412784218788,-0.0113488212227821,0.8850' +
+        '90410709381)'
+    end
+    object LightMaterialSource2: TLightMaterialSource
+      Diffuse = claSeagreen
+      Ambient = xFF202020
+      Emissive = claNull
+      Specular = xFF606060
+      Shininess = 30
+      Left = 544
+      Top = 96
+    end
+    object LightMaterialSource3: TLightMaterialSource
+      Diffuse = claSpringgreen
+      Ambient = xFF202020
+      Emissive = claNull
+      Specular = xFF606060
+      Shininess = 30
+      Left = 552
+      Top = 160
+    end
+  end
+  object LightMaterialSource1: TLightMaterialSource
+    Diffuse = claSkyblue
+    Ambient = xFF202020
+    Emissive = claNull
+    Specular = xFF606060
+    Shininess = 30
+    Left = 544
+    Top = 32
+  end
+end
