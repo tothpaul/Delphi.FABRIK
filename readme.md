@@ -9,3 +9,9 @@ This repository provides a Delphi FMX implementation of the **FABRIK** (Forward 
 - **FABRIK IK Solver**: A full implementation of the FABRIK algorithm for use in FMX 3D applications.
 
 ![FABRIK](Delphi.FABRIK.gif)
+
+## IKSpider
+
+new demo of a walking Spider :)
+
+![Spider](Spider.gif)

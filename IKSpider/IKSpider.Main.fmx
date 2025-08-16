@@ -1,0 +1,109 @@
+object Main: TMain
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 640
+  WindowState = wsMaximized
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object Viewport3D1: TViewport3D
+    Align = Client
+    Size.Width = 640.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    OnMouseDown = Viewport3D1MouseDown
+    OnMouseMove = Viewport3D1MouseMove
+    object Dummy2: TDummy
+      Width = 1.000000000000000000
+      Height = 1.000000000000000000
+      Depth = 1.000000000000000000
+      object RotationY: TDummy
+        Position.Y = 5.000000000000000000
+        Position.Z = 20.000000000000000000
+        RotationAngle.Y = 70.000000000000000000
+        Width = 1.000000000000000000
+        Height = 1.000000000000000000
+        Depth = 1.000000000000000000
+        Quanternion = '(0,0.573576629161835,0,0.819151997566223)'
+        object Dummy1: TDummy
+          Width = 1.000000000000000000
+          Height = 1.000000000000000000
+          Depth = 1.000000000000000000
+          object Light1: TLight
+            Color = claWhite
+            LightType = Directional
+            SpotCutOff = 60.000000000000000000
+            SpotExponent = 4.000000000000000000
+            Position.X = 14.053399085998540000
+            Position.Y = -3.966412067413330000
+            RotationAngle.X = 28.892391204833980000
+            RotationAngle.Y = 18.143686294555660000
+            RotationAngle.Z = -80.739532470703130000
+            Width = 1.000000000000000000
+            Height = 1.000000000000000000
+            Depth = 1.000000000000000000
+            Quanternion = 
+              '(-0.531874716281891,0.470613449811935,0.611230731010437,-0.34932' +
+              '8517913818)'
+          end
+          object Light2: TLight
+            Color = claWhite
+            LightType = Directional
+            SpotCutOff = 60.000000000000000000
+            SpotExponent = 4.000000000000000000
+            Position.X = -20.136333465576170000
+            Position.Y = -6.083745479583740000
+            RotationAngle.X = 42.008380889892580000
+            RotationAngle.Y = 36.753601074218750000
+            RotationAngle.Z = 260.754516601562500000
+            Width = 1.000000000000000000
+            Height = 1.000000000000000000
+            Depth = 1.000000000000000000
+            Quanternion = 
+              '(-0.0177928861230612,0.810789465904236,0.23361824452877,0.536397' +
+              '814750671)'
+          end
+          object LightMaterialSource1: TLightMaterialSource
+            Diffuse = claPeru
+            Ambient = claCoral
+            Emissive = claNull
+            Specular = claChocolate
+            Shininess = 30
+            Left = 560
+            Top = 400
+          end
+        end
+        object Plane1: TPlane
+          RotationAngle.X = 90.000000000000000000
+          Width = 100.000000000000000000
+          Height = 100.000000000000000000
+          Depth = 0.001000000047497451
+          HitTest = False
+          SubdivisionsHeight = 100
+          SubdivisionsWidth = 100
+          MaterialSource = LightMaterialSource1
+          Quanternion = '(0.70710676908493,0,0,0.70710676908493)'
+        end
+        object Sphere1: TSphere
+          Position.X = -1.000000000000000000
+          Position.Y = 2.000000000000000000
+          Position.Z = 20.000000000000000000
+          RotationAngle.Z = 5.000000000000000000
+          Width = 20.000000000000000000
+          Height = 20.000000000000000000
+          Depth = 20.000000000000000000
+          Opacity = 0.500000000000000000
+          HitTest = False
+          SubdivisionsAxes = 32
+          SubdivisionsHeight = 24
+          MaterialSource = LightMaterialSource1
+          Quanternion = '(0,0,-0.0486109256744385,-0.998817682266235)'
+        end
+      end
+    end
+  end
+end
